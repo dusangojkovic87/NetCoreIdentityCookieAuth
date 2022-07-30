@@ -1,0 +1,12 @@
+﻿@page
+@model NetCoreIndentityAuth.Pages.LoginModelPage
+<form class="d-flex flex-column mt-4" method="post">
+    <span asp-validation-summary="All"></span>
+    <span asp-validation-for="@Model.model.Email" class="text-danger"></span>
+    <input class="mb-4" type="email" name="model.Email" placeholder="Email">
+    <span asp-validation-for="@Model.model.Password" class="text-danger"></span>
+    <input type="password" name="model.Password" placeholder="Password">
+    <button class="bg-primary text-white mt-4" type="submit"> Login</button>
+</form>
+
+</div>

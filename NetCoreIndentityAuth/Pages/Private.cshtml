@@ -1,0 +1,17 @@
+﻿@page
+@model MyApp.Namespace.PrivateModel
+
+
+<h1>Private Page</h1>
+
+@if (@User.Identity.IsAuthenticated)
+{
+
+    <h1>User is Authenticated with these claims:</h1>
+    <p><strong>Name:</strong></p>
+    <p>@User.Identity.Name</p>
+    <p><strong>Email:</strong></p>
+    <p>@User.Claims.FirstOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Email).Value</p>
+    <p><strong>Surname:</strong></p>
+    <p>@User.Claims.FirstOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Surname).Value</p>
+}

@@ -1,0 +1,22 @@
+﻿@page
+@model NetCoreIndentityAuth.Pages.RegisterModelPage
+<div class="container">
+    <form class="d-flex flex-column mt-4" method="post">
+        <span asp-validation-for="@Model.model.Name" class="text-danger"></span>
+        <input class="mb-4" type="text" name="model.Name" placeholder="Name">
+        <span asp-validation-for="@Model.model.Surname" class="text-danger"></span>
+        <input class="mb-4" type="text" name="model.Surname" placeholder="Surname">
+        <span asp-validation-for="@Model.model.Email" class="text-danger"></span>
+        <input class="mb-4" type="email" name="model.Email" placeholder="Email">
+        <span asp-validation-for="@Model.model.Password" class="text-danger"></span>
+        <input type="password" name="model.Password" placeholder="Password">
+        <button class="bg-primary text-white mt-4" type="submit">Register</button>
+
+    </form>
+
+</div>
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+
+}
