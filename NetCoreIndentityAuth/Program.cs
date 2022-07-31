@@ -34,8 +34,9 @@ builder.Services.AddIdentity<User, UserRole>(opt =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
 {
     opt.Cookie.Name = "user_cookie";
-    opt.AccessDeniedPath = "/login";
+    opt.AccessDeniedPath = "/account/login";
     opt.ExpireTimeSpan = TimeSpan.FromHours(2);
+
 
 });
 

@@ -15,3 +15,6 @@
     <p><strong>Surname:</strong></p>
     <p>@User.Claims.FirstOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Surname).Value</p>
 }
+<form asp-page-handler="logout" method="post">
+    <button>Logout</button>
+</form>
